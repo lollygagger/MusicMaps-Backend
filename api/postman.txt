@@ -1,0 +1,36 @@
+POST http://172.30.0.3:5000/login
+body: {"username": "suppermine", "avatar": "https://pbs.twimg.com/media/Efso_-yU0AYOreR.jpg"}
+
+POST http://172.30.0.3:5000/login
+body: {"username": "rubbaboy", "avatar": "https://i.scdn.co/image/ab6775700000ee8583541d6ec61029693aa01a0b"}
+
+body: {"username": "benthegecko", "avatar": "https://i.scdn.co/image/ab6775700000ee8596468d9112f3c1e60098b39a"}
+
+POST http://172.30.0.3:5000/friends/requests
+body: {"sender": "suppermine", "receiver": "rubbaboy"}
+
+POST http://172.30.0.3:5000/friends/accept
+body: {"username": "rubbaboy", "friend": "suppermine"}
+
+GET http://172.30.0.3:5000/friends
+query: {"username": "suppermine"}
+
+GET http://172.30.0.3:5000/friends
+query: {"username": "rubbaboy"}
+
+POST http://172.30.0.3:5000/playing
+body: {"username": "suppermine", "currentSongName": "Arcadia", "currentSongGenre": "Jam", "currentSongArtist": "Goose", "currentSongId": "b9fa35f3f19d453f", "longitude": -77.6088, "latitude": 43.1566}
+-
+body: {"username": "rubbaboy", "currentSongName": "Playing God", "currentSongGenre": "instrumental progressive rock band", "currentSongArtist": "polyphia", "currentSongId": "oeshfiouzhdfguh", "longitude": -76.1474, "latitude": 43.0481}
+-
+body: {"username": "benthegecko", "currentSongName": "Hot Tea", "currentSongGenre": "Jam", "currentSongArtist": "Goose", "currentSongId": "hotteateateahot", "longitude": -78.8784, "latitude": 42.8864}
+-
+body: {"username": "suppermine", "currentSongName": "Playing God", "currentSongGenre": "instrumental progressive rock band", "currentSongArtist": "Goose", "currentSongId": "oeshfiouzhdfguh", "longitude": -78.8784, "latitude": 42.8864}
+-
+body: {"username": "suppermine", "currentSongName": "So Ready", "currentSongGenre": "Jam", "currentSongArtist": "Goose", "currentSongId": "soreadysoready", "longitude": -77.6088, "latitude": 43.1566}
+
+
+GET http://172.30.0.3:5000/songs
+
+GET http://172.30.0.3:5000/friends
+query: {"username": "rubbaboy"}
